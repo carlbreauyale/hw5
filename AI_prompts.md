@@ -770,3 +770,19 @@ Now we begin Problem 11: Submit to Github. Please put the header in the prompts 
 
 **Reply:**
 Added the Problem 11 header and logged this prompt. Nothing else run; waiting for the Problem 11 instructions.
+
+**Prompt:**
+[Image: the expected hw5/ file layout: AI_prompts.md, requirements.txt, .env.example, .gitignore, .mcp.json, README.md, data/ (campus_customs.db, campus_customs_new.db), mcp_server/ (server.py, README.md), frontend/, backend/ (main.py, models.py, prompts/ with boss.md, inventory.md, accounting.md, facilities.md, customer_service.md), output/ (harness.md, mcp_smoke.json, desk_tickets.html, design.md, resolved_tickets.json, resolved_board.html, audit_trail.json, github_url.txt)]
+Push our code to a public GitHub repository so graders can clone it. Submit the repo URL to Canvas, and also put it in output/github_url.txt. Do not push the real .env to the GitHub repo. Do include both database files under data/ (the original and the working copy) so graders can run our app easily. The expected file layout in in the attached image.  README should explain: copy original DB to the working copy when you need a clean run, start MCP server, start FastAPI backend, start the React board, reset the DB before a full three-ticket run
+
+**Reply:**
+- **Added the top-level files from the layout:**
+  - `README.md`: what the system is, the repo layout, setup, then copying the original DB to the working copy for a clean run, starting the MCP server, the FastAPI backend and the React board, and resetting the DB before a full three-ticket run.
+  - `.gitignore`: keeps out `.env`, `node_modules`, `__pycache__` and the local `.claude/` settings. It does not ignore the databases.
+  - `.env.example`: a placeholder key only.
+  - `requirements.txt`: moved up from `backend/`.
+  - `output/github_url.txt`.
+- **Secret scan:** the real Portkey key is not in any file, including both databases, and there is no `.env` inside HW5 (the real one is in the course folder, outside the repo).
+- **Created the public repo** https://github.com/carlbreauyale/hw5 (same naming as hw4/hw6) and pushed `main`: 62 files, including both `data/*.db` files.
+- **Checked a fresh clone:** all 26 files in the expected layout are present, there is no `.env`, and both databases pass an integrity check (original $3,400 with no payments; working copy $160 with the 2 approved payments from the Problem 9 run).
+- **Not done by Claude:** submitting the URL to Canvas. The user does that.
