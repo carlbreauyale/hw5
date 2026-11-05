@@ -1,0 +1,32 @@
+# Secrets: never commit the real .env (only the template)
+.env
+.env.*
+!.env.example
+!frontend/.env.example
+
+# Both databases under data/ ARE committed on purpose (original + working copy),
+# so graders can run the app straight away. Only SQLite side files are ignored.
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node / Vite
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Local vibe-coder settings (approvals, preview servers)
+.claude/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
